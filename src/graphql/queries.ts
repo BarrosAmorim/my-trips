@@ -12,3 +12,15 @@ query getPages($first: Int) {
   }
 }
 `
+export const GET_PAGES_BY_SLUG = gql`
+query getPageBySlug($slug: String!) {
+  page(where: { slug: $slug }) {
+    id
+    slug
+    heading
+    body{
+      html
+    }
+  }
+}
+`

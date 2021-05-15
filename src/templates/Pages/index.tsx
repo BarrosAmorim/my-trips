@@ -3,17 +3,19 @@ import LinkWrapper from '../../components/LinkWrapper'
 
 import * as S from './styles'
 
-const PageTemplate = () => (
+export type PagesTemplateProps = {
+    heading: string
+    body: string
+}
+
+const PageTemplate = ({ heading, body }: PagesTemplateProps) => (
     <S.Content>
         <LinkWrapper href="/">
             <CloseOutline size={32} />
         </LinkWrapper>
-        <S.Heading>MiTryps</S.Heading>
+        <S.Heading>{heading}</S.Heading>
         <S.Body>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the standard dummy text ever since the 1500s, when
-                an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
+            <div dangerouslySetInnerHTML={{ __html: body }} />
         </S.Body>
     </S.Content>
 )
