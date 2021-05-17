@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.13.0",
@@ -22,6 +23,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
+    "@graphql-codegen/add": "^2.0.2",
+    "@graphql-codegen/cli": "1.21.4",
+    "@graphql-codegen/typescript": "1.22.0",
+    "@graphql-codegen/typescript-operations": "1.17.16",
     "@types/leaflet": "^1.7.0",
     "@types/node": "^15.0.2",
     "@types/react": "^17.0.5",
